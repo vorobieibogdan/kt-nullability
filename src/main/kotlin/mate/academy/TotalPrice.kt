@@ -5,6 +5,10 @@ package mate.academy
     If the price is not provided, use default price per product equal to 29.99
  */
 fun calculateTotalPrice(pricePerProduct: Double?, count: Int): Double {
-    val price = pricePerProduct ?: 29.99
+    var price = pricePerProduct
+    if (price == null) {
+        price = 29.99
+    }
     return price * count
 }
+
